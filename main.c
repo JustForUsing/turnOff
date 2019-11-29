@@ -18,8 +18,12 @@ void checkScreen() {
     do{
         //TODO 检查屏幕是否在亮着 假如亮是1 不亮是2
         //is_light = thisIsCheckResult();
-        //每两秒查一次
-        Sleep(2000);
+        if(is_light == 1){
+            turnOffScreen();
+        } else{
+            //每两秒查一次
+            Sleep(2000);
+        }
     }while(is_light == 2);
 }
 
